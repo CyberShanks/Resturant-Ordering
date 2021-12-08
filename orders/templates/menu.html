@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+<h1>Menu</h1>
+{% block content %}
+
+{% for food in food_list%}
+<div class="card border-primary mb-3" style="width: 300px;">
+  <div class="card-header">Food Item</div>
+  <div class="card-body text-primary">
+    <h5 class="card-title">{{ food }}</h5>
+    <p class="card-text">
+    	Price: {{ food.price }}<br>
+		Type: {{ food.cuisineid }}<br>
+		Chef: {{ food.chef_id}}</p>
+  </div>
+</div>
+{% endfor %}
+
+
+{% for drink in drink_list%}
+<div class="card border-primary mb-3" style="width: 300px;">
+  <div class="card-header">Drink Item</div>
+  <div class="card-body text-primary">
+    <h5 class="card-title">{{ drink }}</h5>
+    <p class="card-text">
+    	Price: {{ drink.price }}</p>
+  </div>
+</div>
+{% endfor %}
+
+{% endblock %}

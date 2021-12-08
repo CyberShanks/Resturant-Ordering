@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for customer in customer_list%}
+<div class="card border-primary mb-3" style="width: 300px;">
+  <div class="card-header">Customer</div>
+  <div class="card-body text-primary">
+    <h5 class="card-title">{{ customer.fname }} {{customer.lname}}</h5>
+    <p class="card-text">
+    	Allergies: {{customer.allergy}}<br>
+    	Email: {{customer.email}}<br>
+    	Pincode: {{customer.pincode}}<br>
+    	Phone Number: {{customer.phone_no}}<br>
+  </div>
+</div>
+{% endfor %}
+
+{% endblock %}
