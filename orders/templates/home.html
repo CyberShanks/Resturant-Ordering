@@ -1,16 +1,35 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 
+<div class="text-center">
 
+<h1>DBMS Project</h1>
 
-<center>
-<h1>Hello {{ name }}! </h1>
+<h1>Creators</h1>
 
-{{ month }}<br/>
-{{ year }}<br/>
-{{ month_num }}<br/>
-{{ cal|safe }}
-</center>
+<div class="d-flex flex-row">
+<div class="card" style="width: 18rem;">
+  <img src="{% static 'shashank.jpeg' %}" class="card-img-top" alt="..." height="400px">
+  <div class="card-body">
+    <p class="card-text">Shashank Mishra<br>2020UCO1686</p>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="{% static 'ishita.jpg' %}" class="card-img-top" alt="..." height="400px">
+  <div class="card-body">
+    <p class="card-text">Ishita Nayak<br>2020UCO1699</p>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="{% static 'aryaman.jpg' %}" class="card-img-top" alt="..." height="400px">
+  <div class="card-body">
+    <p class="card-text">Aryaman Sood<br>2020UCO1669</p>
+  </div>
+</div>
+</div>
 
 {% endblock %}
